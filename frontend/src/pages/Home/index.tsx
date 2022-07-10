@@ -2,9 +2,10 @@ import React from 'react';
 
 import './styles.css';
 
-export function Home () {
+const Home = () => {
     return (
-        <>
-        </>
+        <></>
     )
 }
+
+export default Home;
