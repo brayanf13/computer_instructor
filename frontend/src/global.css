@@ -1,0 +1,29 @@
+/* Fonts */
+@font-face {
+  src: url("../src/fonts/Poppins/Poppins-Medium.ttf");
+  font-family: "Poppins-Regular";
+  font-weight: normal;
+}
+
+:root {
+  --blue: #4174F6;
+  --white: #FAFAFA;
+  --background: #F0F0F7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins-Regular";
+}
+
+body {
+  background: var(--background);
+}
+
+ a{
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: bold;
+ }
