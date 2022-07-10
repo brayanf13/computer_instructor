@@ -7,6 +7,10 @@
   padding: 1rem;
 }
 
+.image {
+
+}
+
 .formulario h1 {
   margin: 25px;
   font-size: 3rem;
@@ -15,7 +19,6 @@
 }
 
 .formulario, form {
-  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,25 +27,28 @@
 }
 
 .formulario {
+  margin: 1rem;
   box-shadow: 8px 4px 4px rgba(0, 0, 0, 0.2);
-}
-
-.formulario input {
-  width: 24rem;
-  height: 3.6rem;
-  font-size: 1rem;
-  box-sizing: border-box;
-
-  margin: 5px 0;
-  padding: 1rem;
-
-  border: none;
-  border-radius: 8px;
-  background: var(--background);
 }
 
 .formulario label{
   display: flex;
   flex-direction: column;
   margin: 10px;
+}
+
+@media screen and (max-width: 750px){
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .formulario, form {
+    width: 90%;
+  }
+
+  .image {
+    display: none;
+  }
 }

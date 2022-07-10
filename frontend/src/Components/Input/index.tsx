@@ -2,9 +2,16 @@ import React from 'react';
 
 import './styles.css';
 
-export function Input () {
-    return (
-        <>
-        </>
-    )
+interface InputProps {
+  id: string;
+  type: string;
+  placeholder: string;
+}
+
+export function Input({ id, placeholder, type }: InputProps) {
+  return (
+    <>
+      <input id={id} type={type} placeholder={placeholder} required />
+    </>
+  );
 }

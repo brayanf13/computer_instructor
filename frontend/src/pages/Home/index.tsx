@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../../Components/Button';
+import { Input } from '../../Components/Input';
 
 import './styles.css';
 
@@ -13,21 +14,11 @@ export function Home() {
           <form action="">
             <label htmlFor="email">
               E-mail:
-              <input
-                id="email"
-                type="email"
-                placeholder="usuario@email.com"
-                required
-              />
+              <Input id="email" placeholder="usuario@email.com" type="email" />
             </label>
             <label htmlFor="password">
               Senha:
-              <input
-                id="password"
-                type="password"
-                placeholder="********"
-                required
-              />
+              <Input id="password" type="password" placeholder="********" />
             </label>
             <span>
               Não possui uma conta? <a href="">Cadastre-se</a>
