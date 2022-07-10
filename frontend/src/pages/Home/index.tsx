@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../../Components/Button';
 
 import './styles.css';
 
@@ -31,7 +32,7 @@ export function Home() {
             <span>
               Não possui uma conta? <a href="">Cadastre-se</a>
             </span>
-            <button type="submit">Entrar</button>
+            <Button typeButton="submit" text="Entrar" />
           </form>
         </div>
       </div>
