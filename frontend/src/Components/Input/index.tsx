@@ -5,7 +5,7 @@ import './styles.css';
 interface InputProps {
   id: string;
   type: string;
-  placeholder: string;
+  placeholder?: string;
 }
 
 export function Input({ id, placeholder, type }: InputProps) {

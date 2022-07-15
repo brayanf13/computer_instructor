@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 import Home from './pages/Home/index';
-import { Login } from './pages/Login';
+import { Login } from './pages/Login/index';
 import { ModuleEdit } from './pages/ModuleEdit';
 import { ModuleRegister } from './pages/ModuleRegister';
 import { ProfEdit } from './pages/ProfEdit';

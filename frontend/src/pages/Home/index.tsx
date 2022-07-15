@@ -1,30 +1,31 @@
 import React from 'react';
-import Button from '../../Components/Button';
-import { Input } from '../../Components/Input';
+import animation from '../../assets/images/animated.gif';
+import { FiEye, FiSave } from 'react-icons/fi';
 
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 export function Home() {
   return (
     <>
-      <div className="container">
-        <div className="image">imagem aqui</div>
-        <div className="formulario">
-          <h1>Login</h1>
-          <form action="">
-            <label htmlFor="email">
-              E-mail:
-              <Input id="email" placeholder="usuario@email.com" type="email" />
-            </label>
-            <label htmlFor="password">
-              Senha:
-              <Input id="password" type="password" placeholder="********" />
-            </label>
-            <span>
-              Não possui uma conta? <a href="">Cadastre-se</a>
-            </span>
-            <Button typeButton="submit" text="Entrar" />
-          </form>
+      <div className="container-home">
+        <div className="container-home-apresentation">
+          <div className="image">
+            <img className="logo" src={animation} alt="animation" />
+          </div>
+          <div>
+            <div className="container-home-options">
+              <h2>Bem vindo !</h2>
+              <Link className="button" to={'/login'}>
+                <FiSave size={24} />
+                Cadastrar conteúdo
+              </Link>
+              <Link className="button" to={'/login'}>
+                <FiEye size={24} />
+                Assistir aulas
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </>
