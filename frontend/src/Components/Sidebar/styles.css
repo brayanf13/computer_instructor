@@ -1,0 +1,122 @@
+#nav li a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+#nav li a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#nav .option-menu {
+  display: flex;
+  flex-direction: row;
+  color: var(--white);
+}
+
+#nav .option-menu img {
+  width: 1.4rem;
+  margin: 0 0.5rem;
+}
+
+.logo {
+  width: 3.6rem;
+}
+
+#header {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--blue);
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a{
+  display: block;
+  padding: 0.5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media (max-width: 600px){
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: var(--blue);
+    z-index: 1000;
+    /* tamanho inicial do menu */
+    height: 0px;
+    transition: 0.6s;
+    /* macete: para esconder o menu pois não pode ter mudança de display nesse elemento quando a classe "ativo" é adiciona, caso haja a transição não funciona! */
+    visibility: hidden;
+    /* USABILIDADE: quando a quantidade de itens do menu é muito grande e maior que a tela, este atributo cria um scroll para que naveguemos até o fim */
+    overflow-y: hidden;
+  }
+  #nav.ativo #menu {
+    /* macete: tamanho total da tela - tamanhop definido para o menu */
+    height: calc(100vh - 70px);
+    visibility: visible;
+    /* USABILIDADE: este atributo faz com que o scroll criado seja do tamanho necessário para acessar todos os elementos do menu que passam da tela */
+    overflow-y: auto;
+  }
+  #menu a {
+    padding: 1rem 0rem;
+    margin: 0rem 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  #btn-mobile {
+    width: 3.2rem;
+    display: flex;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburguer {
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+  }
+
+  #hamburguer::after, #hamburguer::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    /* pega o valor da cor atual do elemento e aplica aqui*/
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    /* serve para que o #nav.ativo #hamburguer::after possa atribur o "top" pois só funciona em position fixed, relative ou absolute */
+    position: relative;
+  }
+
+  #nav.ativo #hamburguer {
+    /* este é o elemento criado no #hamburguer */
+    border-top: transparent;
+  }
+  
+  #nav.ativo #hamburguer::before {
+    transform: rotate(135deg);
+  }
+  #nav.ativo #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
