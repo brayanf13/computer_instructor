@@ -6,8 +6,6 @@ import InfoIcon from '../../assets/images/info.svg';
 
 import './styles.css';
 
-const btnMobile = document.getElementById('btn-mobile');
-
 function toggleMenu(e: SyntheticEvent) {
   if (e.type === 'touchstart') e.preventDefault();
 
@@ -31,7 +29,7 @@ export function Sidebar() {
     <>
       <header id="header">
         <a href="">
-          <img className="logo" src={Logo} alt="logo" />
+          <img className="logo-sidebar" src={Logo} alt="logo" />
         </a>
 
         <nav id="nav">

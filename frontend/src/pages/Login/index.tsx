@@ -17,7 +17,7 @@ export function Login() {
         <div className="formulario">
           <div className="container-login-return">
             <Link to="/">
-              <FiArrowLeft size={32} color="#4174F6" />
+              <FiArrowLeft className="logo-icon" size={32} color="#4174F6" />
             </Link>
           </div>
           <h1>Login</h1>
@@ -31,7 +31,7 @@ export function Login() {
               <Input id="password" type="password" placeholder="********" />
             </label>
             <span>
-              Não possui uma conta? <a href="">Cadastre-se</a>
+              Não possui uma conta? <Link to={'/register'}>Cadastre-se</Link>
             </span>
             <Button typeButton="submit" text="Entrar" />
           </form>

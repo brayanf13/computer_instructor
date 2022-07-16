@@ -5,12 +5,15 @@ import './styles.css';
 interface ButtonProps {
   text: string;
   typeButton: 'button' | 'submit' | 'reset' | undefined;
+  id?: string;
 }
 
-export function Button({ text, typeButton }: ButtonProps) {
+export function Button({ text, typeButton, id }: ButtonProps) {
   return (
     <>
-      <button type={typeButton}>{text}</button>
+      <button id={id} type={typeButton}>
+        {text}
+      </button>
     </>
   );
 }

@@ -25,12 +25,12 @@
 }
 
 
-.container-login-return img {
+.container-login-return .logo-icon {
   cursor: pointer;
   transition: 0.5s;
 }
 
-.container-login-return img:hover {
+.container-login-return .logo-icon:hover {
   filter: brightness(0.8);
 }
 

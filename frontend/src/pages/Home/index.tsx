@@ -4,12 +4,10 @@ import { FiEye, FiSave } from 'react-icons/fi';
 
 import './styles.css';
 import { Link } from 'react-router-dom';
-import Sidebar from '../../Components/Sidebar';
 
 export function Home() {
   return (
     <>
-      <Sidebar />
       <div className="container-home">
         <div className="container-home-apresentation">
           <div className="image">
